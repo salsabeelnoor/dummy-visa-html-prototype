@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./libs/bootstrap-5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Dummy-visa</title>
 </head>
+
 <body>
-    <h2>Website for dummy visa</h2>
+    <nav id="top-nav" class="nav navbar nav-shadow navbar-expand-xl justify-content-between gap-1">
+        <div class=" container-fluid px-3 px-xl-5">
+            <div class="navbar-wrapper d-flex justify-content-between align-items-center">
+                <a class="navbar__logo d-flex align-items-center me-auto me-xl-0" href="index.html">
+                    DummyVisa
+                </a>
+                <div class="d-flex align-items-center gap-3">
+                    <div type="button" class="button button--gap-12 button--primary d-none d-sm-flex d-xl-none">
+                        <p>Register Now</p>
+                        <div>
+                            <div class="icon rounded-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22" viewBox="0 0 25 22"
+                                    fill="none">
+                                    <path
+                                        d="M3.86587 15.7529L20.7125 6.24702M20.7125 6.24702L10.9313 3.9485M20.7125 6.24702L17.8587 15.6749"
+                                        stroke="#D0DE8F" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler d-block d-xl-none p-0"
+                        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <svg width="36" height="36" viewBox="0 0 100 100">
+                            <path class="line line1"
+                                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3"
+                                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul
+                    class="navbar__lists navbar-nav me-auto align-items-start align-items-xl-center gap-40 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="speakers.html">SPEAKERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agenda.html">AGENDA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">NEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partner.html">PARTNER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero d-flex align-items-center">
+        <div class="hero__bg">
+            <video autoplay loop muted playsinline class="hero__bg__video">
+                <source src="assets/video/hero-bg-3.mp4" type="video/mp4">
+            </video>
+            <div class="hero__bg__gradient"></div>
+        </div>
+        <div class="hero__content">
+            <h1>Get a verified dummy flight ticket </h1>
+            <p>Our dummy tickets are used for visa applications or as proof of onward travel. All come with a unique PNR
+                code that you can use to verify. Select the flight that suits your needs, and your dummy flight will be
+                ready for instant download during checkout!</p>
+            <button class="button button--white d-flex justify-content-center mt-3">
+                <div class="d-flex align-items-center position-relative">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="">
+                        <path d="M14 5L21 12M21 12L14 19M21 12L3 12" stroke="#000" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span class="d-inline-block btn-text">Book Now</span>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <!-- Bootstrap js -->
+    <script src="./libs/bootstrap-5.3.3/js/bootstrap.min.js"></script>
 </body>
+
 </html>
