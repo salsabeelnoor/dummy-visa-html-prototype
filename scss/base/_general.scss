@@ -68,18 +68,20 @@ p {
 
 //----------- section style -----------
 .section {
-
+  &--gap {
+    padding-top: 100px;
+  }
 }
 
 //----------- button styles -----------
 .button {
   outline: none;
   border: 0;
-  padding: 12px 24px;
-  &--white {
-    width: 160px;
+  padding: 10px 24px;
+  &--primary {
+    width: 150px;
     transition: all 0.2s ease-in;
-
+    // background-color: #00e7ff;
     svg {
       position: absolute;
       left: 0;
