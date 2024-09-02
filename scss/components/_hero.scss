@@ -24,13 +24,9 @@
         }
     }
     &__content{
-        padding-inline: 16px;
         color: #fff;
         @include md {
             width: 700px;
-        }
-        @include lg {
-            padding-left: 60px;
         }
         h1 {
             // border: 2px solid red;
