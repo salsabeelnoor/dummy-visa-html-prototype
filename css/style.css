@@ -61,8 +61,18 @@ p {
   border-radius: 4px;
 }
 
-.section--gap {
-  padding-top: 100px;
+.section {
+  padding-block: 60px 32px;
+}
+.section__gap--60 {
+  margin-top: 60px;
+}
+.section__header {
+  margin-bottom: 48px;
+}
+.section__header h2 {
+  font-weight: 800;
+  color: #00255a;
 }
 
 .button {
@@ -224,9 +234,14 @@ p {
 }
 
 .hero {
-  min-height: 50vh;
+  min-height: 65vh;
   position: relative;
   margin-top: 62px;
+}
+@media only screen and (min-width: 576px) {
+  .hero {
+    min-height: 50vh;
+  }
 }
 .hero__bg {
   position: absolute;
@@ -251,17 +266,14 @@ p {
   color: #fff;
 }
 @media only screen and (min-width: 768px) {
-  .hero__content {
-    width: 700px;
+  .hero__content p {
+    width: 680px;
   }
 }
 .hero__content h1 {
   font-weight: 700;
 }
 
-.splide {
-  padding-top: 32px;
-}
 .splide__slide img {
   width: 100%;
   height: 100%;
@@ -270,7 +282,7 @@ p {
 
 :root {
   --font-size: 0.8em;
-  --bg1: #f5f8f7;
+  --bg1: #dee5ff;
   --blue: #3498db;
   --green: #2ecc71;
   --purple: #9b59b6;
@@ -279,6 +291,10 @@ p {
   --orange: #e67e22;
   --shadow1: 0 2px 4px #00000026, 0 3px 6px #0000001f;
   --shadow2: 0 2px 6px #00000044, 0 4px 7px #00000022;
+}
+
+.booking {
+  background-color: var(--bg1);
 }
 
 ul.infoGraphic {
@@ -364,14 +380,17 @@ ul.infoGraphic li .content {
   position: relative;
 }
 ul.infoGraphic li .content h2 {
-  font-size: 1.7em;
-  font-weight: 500;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #00255a;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-transform: uppercase;
 }
 ul.infoGraphic li .content p {
-  line-height: 1.5em;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.3em;
 }
 
 ul.infoGraphic li:hover .coverWrap .numberCover {
@@ -382,26 +401,8 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   position: absolute;
   font-size: 2rem;
   text-align: center;
-  top: -1.3em;
+  top: -1.4em;
   left: 50%;
-  transform: translatex(-50%);
-}
-.icon:before {
-  color: #666;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-}
-
-.iconCodepen:before {
-  content: "\f1cb";
-}
-
-.iconSocial:before {
-  content: "\f08a";
-}
-
-.iconAirplane:before {
-  content: "\f1d9";
+  transform: translateX(-50%);
+  color: #00337e;
 }

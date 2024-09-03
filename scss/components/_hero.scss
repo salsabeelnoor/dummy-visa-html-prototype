@@ -1,7 +1,10 @@
 .hero{
-    min-height: 50vh;
+    min-height: 65vh;
     position: relative;
     margin-top: 62px;
+    @include sm {
+        min-height: 50vh;
+    }
     &__bg{
         position: absolute;
         left: 0;
@@ -26,10 +29,11 @@
     &__content{
         color: #fff;
         @include md {
-            width: 700px;
+            p {
+                width: 680px;
+            }
         }
         h1 {
-            // ;
             font-weight: 700;
         }
     }

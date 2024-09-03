@@ -1,7 +1,7 @@
 :root {
     // Scale is using this font-size
     --font-size: 0.8em;
-    --bg1: #f5f8f7;
+    --bg1: #dee5ff;
     --blue: #3498db;
     --green: #2ecc71;
     --purple: #9b59b6;
@@ -10,6 +10,9 @@
     --orange: #e67e22;
     --shadow1: 0 2px 4px #00000026, 0 3px 6px #0000001f;
     --shadow2: 0 2px 6px #00000044, 0 4px 7px #00000022;
+  }
+  .booking {
+    background-color: var(--bg1);
   }
   ul.infoGraphic {
     // Resize with Ems
@@ -99,14 +102,17 @@
         margin: 6em 1em 1em 7em;
         position: relative;
         h2 {
-          font-size: 1.7em;
-          font-weight: 500;
+          font-size: 1.5em;
+          font-weight: 600;
+          color: $primary-color-p200;
           text-align: center;
-          margin-bottom: 10px;
+          margin-bottom: 8px;
           text-transform: uppercase;
         }
         p {
-          line-height: 1.5em;
+          text-align: center;
+          font-size: 1.2em;
+          line-height: 1.3em;
         }
       }
     }
@@ -118,32 +124,9 @@
     position: absolute;
     font-size: 2rem;
     text-align: center;
-    top: -1.3em;
+    top: -1.4em;
     left: 50%;
-    transform: translatex(-50%);
-    &:before {
-      color: #666;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      text-decoration: inherit;
-    }
+    transform: translateX(-50%);
+    color: #00337e;
   }
   
-  .iconCodepen {
-    &:before {
-      content: "\f1cb";
-    }
-  }
-  
-  .iconSocial {
-    &:before {
-      content: "\f08a";
-    }
-  }
-  
-  .iconAirplane {
-    &:before {
-      content: "\f1d9";
-    }
-  }
