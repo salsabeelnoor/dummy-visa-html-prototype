@@ -62,7 +62,7 @@ p {
 }
 
 .section {
-  padding-block: 60px 32px;
+  padding-block: 60px;
 }
 .section__gap--60 {
   margin-top: 60px;
@@ -79,12 +79,11 @@ p {
   outline: none;
   border: 0;
   padding: 10px 24px;
-}
-.button--primary {
-  width: 150px;
+  width: 180px;
+  border: 2px solid transparent;
   transition: all 0.2s ease-in;
 }
-.button--primary svg {
+.button svg {
   position: absolute;
   left: 0;
   opacity: 0;
@@ -92,14 +91,14 @@ p {
   margin-left: -12px;
   transform: translateX(-10px);
 }
-.button--primary .btn-text {
+.button .btn-text {
   transition: all 0.2s ease-in;
 }
-.button--primary:hover svg {
+.button:hover svg {
   opacity: 1;
   transform: translateX(0px);
 }
-.button--primary:hover .btn-text {
+.button:hover .btn-text {
   transform: translateX(12px);
 }
 
@@ -282,7 +281,7 @@ p {
 
 :root {
   --font-size: 0.8em;
-  --bg1: #dee5ff;
+  --bg1: #e4f3fbe6;
   --blue: #3498db;
   --green: #2ecc71;
   --purple: #9b59b6;
@@ -405,4 +404,84 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   left: 50%;
   transform: translateX(-50%);
   color: #00337e;
+}
+
+.dummy-tkt-info--left {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .dummy-tkt-info--left.image {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dummy-tkt-info--left {
+    width: 50%;
+  }
+  .dummy-tkt-info--left.image {
+    width: 50%;
+  }
+}
+.dummy-tkt-info--left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media only screen and (min-width: 992px) {
+  .dummy-tkt-info--left img {
+    width: auto;
+    object-fit: none;
+  }
+}
+.dummy-tkt-info h2 {
+  font-weight: 700;
+  color: #00255a;
+}
+@media only screen and (min-width: 1200px) {
+  .dummy-tkt-info h2 {
+    font-size: 34px;
+  }
+}
+.dummy-tkt-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.dummy-tkt-info ul {
+  list-style: none;
+  padding-left: 0px;
+}
+.dummy-tkt-info ul li {
+  padding-bottom: 4px;
+}
+.dummy-tkt-info ul i {
+  color: #3597d9;
+}
+@media only screen and (min-width: 1200px) {
+  .dummy-tkt-info p {
+    font-size: 17px;
+  }
+}
+.dummy-tkt-info--right {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .dummy-tkt-info--right.image {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dummy-tkt-info--right {
+    width: 50%;
+  }
+}
+.dummy-tkt-info--right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media only screen and (min-width: 992px) {
+  .dummy-tkt-info--right img {
+    width: auto;
+    object-fit: none;
+  }
 }

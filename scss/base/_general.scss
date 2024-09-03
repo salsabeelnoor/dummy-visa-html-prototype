@@ -13,7 +13,7 @@ body {
   font-style: normal;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -47,13 +47,16 @@ p {
 .mb-60 {
   margin-bottom: 60px;
 }
+
 // ---------- custom gap class ----------------
-.gap-40{
+.gap-40 {
   gap: 8px;
-  @include xl{
+
+  @include xl {
     gap: 24px;
   }
-  @include xxl{
+
+  @include xxl {
     gap: 40px;
   }
 }
@@ -68,13 +71,16 @@ p {
 
 //----------- section style -----------
 .section {
-  padding-block: 60px 32px;
+  padding-block: 60px;
+
   &__gap--60 {
     margin-top: 60px;
   }
+
   &__header {
     margin-bottom: 48px;
-    h2{
+
+    h2 {
       font-weight: 800;
       color: #00255a;
     }
@@ -86,34 +92,36 @@ p {
   outline: none;
   border: 0;
   padding: 10px 24px;
-  &--primary {
-    width: 150px;
-    transition: all 0.2s ease-in;
-    // background-color: #00e7ff;
-    svg {
-      position: absolute;
-      left: 0;
-      opacity: 0;
-      transition: all 0.2s ease-in;
-      margin-left: -12px;
-      transform: translateX(-10px);
-    }
-    .btn-text{
-      // color: #126FDE;
-      transition: all 0.2s ease-in;
+  width: 180px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in;
 
-    }
-    &:hover {
-      svg {
-        opacity: 1;
-        transform: translateX(0px);
-      }
-      .btn-text{
-        transform: translateX(12px);
-      }
-    }
+  // background-color: #00e7ff;
+  svg {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    margin-left: -12px;
+    transform: translateX(-10px);
   }
 
+  .btn-text {
+    // color: #126FDE;
+    transition: all 0.2s ease-in;
+
+  }
+  &:hover {
+    svg {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+
+    .btn-text {
+      transform: translateX(12px);
+    }
+
+  }
 }
 
 // --------------- color styles -----------------
@@ -123,15 +131,19 @@ p {
 .paragraph {
   &-normal {
     font-size: 14px;
+
     @include lg {
       font-size: 16px;
     }
   }
+
   &-medium {
     font-size: 18px;
   }
+
   &-semi-large {
     font-size: 18px;
+
     @include lg {
       font-size: 20px;
     }
