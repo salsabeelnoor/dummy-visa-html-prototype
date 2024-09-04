@@ -1,67 +1,84 @@
 .dummy-tkt-info {
     &--left {
         width: 100%;
+
         @include md {
-            &.image{
+            &.image {
                 width: 60%;
             }
         }
+
         @include lg {
             width: 50%;
-            &.image{
-                width: 50%;
+
+            &.image {
+                width: 47%;
             }
         }
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+
             @include lg {
                 width: auto;
                 object-fit: none;
             }
         }
     }
+
     h2 {
         font-weight: 700;
-        color: $primary-color-p200;
+        color: $primary-color-p300;
+
         @include xl {
             font-size: 34px;
         }
     }
+
     h3 {
         font-size: 20px;
         font-weight: 700;
     }
+
     ul {
         list-style: none;
         padding-left: 0px;
+
         li {
             padding-bottom: 4px;
         }
+
         i {
-            color: $primary-color-p75;
+            color: $primary-color-p100;
         }
     }
-    p{
+
+    p {
         @include xl {
             font-size: 17px;
         }
     }
+
     &--right {
         width: 100%;
+
         @include md {
-            &.image{
+            &.image {
                 width: 60%;
             }
         }
+
         @include lg {
             width: 50%;
         }
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+
             @include lg {
                 width: auto;
                 object-fit: none;
