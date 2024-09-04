@@ -73,6 +73,10 @@ p {
 .section__header h2 {
   font-weight: 800;
   color: #00255a;
+  text-align: center;
+}
+.section__header p {
+  font-size: 20px;
 }
 
 .button {
@@ -122,6 +126,14 @@ p {
   }
 }
 
+.text-color-p200 {
+  color: #00337e;
+}
+
+.text-color-p300 {
+  color: #00255a;
+}
+
 .navbar {
   --bs-navbar-active-color: #D0DE8F;
   --bs-navbar-color: white;
@@ -168,7 +180,7 @@ p {
 }
 .navbar__logo span {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   color: #00337e;
 }
 @media only screen and (min-width: 992px) {
@@ -543,4 +555,42 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 }
 .reasons__box p {
   font-size: 16px;
+}
+
+.faq__content {
+  width: 100%;
+}
+.faq__content .accordion {
+  width: 75%;
+  --bs-accordion-color: #000;
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-border-width: 1px;
+  --bs-accordion-btn-color: #fff;
+  --bs-accordion-active-color: #fff;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-btn-padding-x: 1.25rem;
+  --bs-accordion-btn-padding-y: 1rem;
+  --bs-accordion-btn-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff' class='size-6'%3E%3Cpath fill-rule='evenodd' d='M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  --bs-accordion-btn-active-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff' class='size-6'%3E%3Cpath fill-rule='evenodd' d='M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z' clip-rule='evenodd' /%3E%3C/svg%3E");
+}
+.faq__content .accordion-item {
+  border: 0;
+}
+.faq__content .accordion-item:first-of-type > .accordion-header .accordion-button {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.faq__content .accordion-button {
+  background-color: #3597d9;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  padding: var(--bs-accordion-btn-padding-y) 14px;
+  font-weight: 600;
+  font-size: 17px;
+}
+.faq__content .accordion-body {
+  background-color: #c0e3fc;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  font-size: 15px;
 }

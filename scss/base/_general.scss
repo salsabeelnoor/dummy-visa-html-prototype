@@ -83,6 +83,10 @@ p {
     h2 {
       font-weight: 800;
       color: #00255a;
+      text-align: center;
+    }
+    p{
+      font-size: 20px;
     }
   }
 }
@@ -96,7 +100,6 @@ p {
   border: 2px solid transparent;
   transition: all 0.2s ease-in;
 
-  // background-color: #00e7ff;
   svg {
     position: absolute;
     left: 0;
@@ -107,7 +110,6 @@ p {
   }
 
   .btn-text {
-    // color: #126FDE;
     transition: all 0.2s ease-in;
 
   }
@@ -150,4 +152,10 @@ p {
   }
 }
 
-// ----------- spring cone bg style ---------------
+// ----------- text-color ---------------
+.text-color-p200 {
+  color: $primary-color-p200;
+}
+.text-color-p300 {
+  color: $primary-color-p300;
+}
