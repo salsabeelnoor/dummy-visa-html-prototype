@@ -1,0 +1,23 @@
+.footer {
+    background-color: $primary-color-p300;
+
+    .brand {
+        // border: 2px solid red;
+        &__image {
+            width: 50px;
+            height: 50px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__name {
+            h2 {
+                color: #fff;
+                text-shadow: 0px 3px 3px rgb(6 21 49);
+            }
+        }
+    }
+}
