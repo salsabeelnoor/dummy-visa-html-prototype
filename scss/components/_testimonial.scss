@@ -1,0 +1,173 @@
+.testimonial {
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 500px;
+        background: linear-gradient(rgb(255 255 255 / 81%), rgba(34, 73, 98, 0.4117647059)), url('../../assets/Banner-image-3.jpg') lightgrey no-repeat 50% / cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        @include sm {
+            height: 400px;
+        }
+        @include lg {
+            height: 500px;
+        }
+    }
+
+    &__item {
+        padding: 40px 24px;
+        background: #80b0d2;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: transform .3s;
+        border-radius: 4px;
+        height: 100%;
+
+        @include sm {
+            padding: 30px 30px;
+        }
+
+        @include md {
+            padding: 40px 24px;
+        }
+
+        @include lg {
+            transform: scale(0.9);
+        }
+
+        &__image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+            @include lg {
+                width: 80px;
+                height: 80px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+
+            }
+        }
+
+        &__date {
+            color: #000;
+            text-transform: capitalize;
+            margin-bottom: 8px;
+            font-size: 14px;
+
+            @include md {
+                font-size: 16px;
+                margin-bottom: 14px;
+            }
+        }
+
+        &__rating {
+            margin-bottom: 8px;
+        }
+
+        &__details {
+            color: #000;
+            font-size: 14px;
+            line-height: 1.75;
+            // border: 2px solid red;
+            
+            @include md {
+                font-size: 16px;
+                max-height: 200px;
+                overflow-y: auto;
+            }
+
+            &::-webkit-scrollbar {
+                width: 6px;
+                /* width of the entire scrollbar */
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #a1d7fd;
+                border-radius: 40px;
+                /* color of the tracking area */
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #5897c4;
+                /* color of the scroll thumb */
+                border-radius: 40px;
+                /* roundness of the scroll thumb */
+                // border: 3px solid orange;
+                /* creates padding around scroll thumb */
+            }
+        }
+
+        &__name {
+            color: $primary-color-p300;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: capitalize;
+            line-height: 1.65;
+            margin-top: 10px;
+
+            @include md {
+                font-size: 20px;
+            }
+
+        }
+    }
+
+    .splide {
+        padding: 0 16px;
+
+        @include lg {
+            padding: 0 58px;
+        }
+
+        &__arrow {
+            &.testimonial__arrow {
+                width: 28px;
+                height: 28px;
+                background: transparent;
+                border: 2px solid #d0de8f;
+
+                @include lg {
+                    width: 38px;
+                    height: 38px;
+                }
+
+                svg {
+                    fill: none;
+                    stroke: $secondary;
+                    width: 8px;
+                }
+
+                &--prev {
+                    left: 0px;
+                }
+
+                &--next {
+                    right: 0px;
+                }
+            }
+        }
+    }
+
+    .is-visible {
+        &.is-active {
+            .testimonial {
+                &__item {
+                    border-radius: 4px;
+
+                    @include md {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}

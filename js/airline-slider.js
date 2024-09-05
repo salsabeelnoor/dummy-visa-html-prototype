@@ -1,6 +1,6 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", function () {
-  const splide = new Splide(".splide", {
+  const splide = new Splide("#airline-slider", {
     autoStart: true,
     type: "loop",
     drag: "free",

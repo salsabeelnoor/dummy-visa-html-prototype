@@ -1,9 +1,11 @@
-.splide{
-    &__slide {
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+.airline-slider {
+    .splide{
+        &__slide {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 }
