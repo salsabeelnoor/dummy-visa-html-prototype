@@ -85,7 +85,8 @@ p {
       color: #00255a;
       text-align: center;
     }
-    p{
+
+    p {
       font-size: 20px;
     }
   }
@@ -113,6 +114,7 @@ p {
     transition: all 0.2s ease-in;
 
   }
+
   &:hover {
     svg {
       opacity: 1;
@@ -154,8 +156,9 @@ p {
 
 // ----------- text-color ---------------
 .text-color-p200 {
-  color: $primary-color-p200;
-}
-.text-color-p300 {
   color: $primary-color-p300;
+}
+
+.text-color-p300 {
+  color: $primary-color-p400;
 }

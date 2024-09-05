@@ -10,9 +10,11 @@
         top: 0;
         left: 0;
         right: 0;
+
         @include sm {
             height: 400px;
         }
+
         @include lg {
             height: 500px;
         }
@@ -20,7 +22,7 @@
 
     &__item {
         padding: 40px 24px;
-        background: #80b0d2;
+        background: $primary-color-p100;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         transition: transform .3s;
         border-radius: 4px;
@@ -57,28 +59,24 @@
             }
         }
 
-        &__date {
-            color: #000;
+        &__name {
+            color: $primary-color-p400;
+            font-weight: 700;
+            font-size: 16px;
             text-transform: capitalize;
-            margin-bottom: 8px;
-            font-size: 14px;
+            line-height: 1.65;
+            margin-block: 10px 12px;
 
             @include md {
-                font-size: 16px;
-                margin-bottom: 14px;
+                font-size: 20px;
             }
-        }
-
-        &__rating {
-            margin-bottom: 8px;
         }
 
         &__details {
             color: #000;
             font-size: 14px;
             line-height: 1.75;
-            // border: 2px solid red;
-            
+
             @include md {
                 font-size: 16px;
                 max-height: 200px;
@@ -87,38 +85,20 @@
 
             &::-webkit-scrollbar {
                 width: 6px;
-                /* width of the entire scrollbar */
             }
 
             &::-webkit-scrollbar-track {
                 background: #a1d7fd;
                 border-radius: 40px;
-                /* color of the tracking area */
             }
 
             &::-webkit-scrollbar-thumb {
                 background-color: #5897c4;
-                /* color of the scroll thumb */
                 border-radius: 40px;
-                /* roundness of the scroll thumb */
-                // border: 3px solid orange;
-                /* creates padding around scroll thumb */
             }
         }
 
-        &__name {
-            color: $primary-color-p300;
-            font-weight: 700;
-            font-size: 16px;
-            text-transform: capitalize;
-            line-height: 1.65;
-            margin-top: 10px;
 
-            @include md {
-                font-size: 20px;
-            }
-
-        }
     }
 
     .splide {
@@ -133,7 +113,7 @@
                 width: 28px;
                 height: 28px;
                 background: transparent;
-                border: 2px solid #d0de8f;
+                border: 2px solid $primary-color-p75;
 
                 @include lg {
                     width: 38px;
@@ -142,7 +122,8 @@
 
                 svg {
                     fill: none;
-                    stroke: $secondary;
+                    stroke: $primary-color-p75;
+                    stroke-width: 3px;
                     width: 8px;
                 }
 
@@ -161,7 +142,7 @@
         &.is-active {
             .testimonial {
                 &__item {
-                    border-radius: 4px;
+                    border-radius: 6px;
 
                     @include md {
                         transform: scale(1);
