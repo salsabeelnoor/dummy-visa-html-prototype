@@ -86,9 +86,9 @@ p {
   width: 200px;
   transition: box-shadow 0.5s ease-in;
   background-color: #c0e3fc;
-  font-weight: 600;
+  font-weight: 700;
   color: #00255a;
-  box-shadow: inset 0 0 0 0 #3597d9;
+  box-shadow: inset 0 0 0 0 #3597d9, rgba(0, 0, 0, 0.24) 0px 2px 6px;
   border-radius: 8px;
 }
 .button svg {
@@ -96,6 +96,7 @@ p {
   left: 0;
   opacity: 0;
   stroke: #fff;
+  stroke-width: 3px;
   transition: opacity 0.3s ease-in, transform 0.3s ease-in;
   margin-left: -12px;
   transform: translateX(-10px);
@@ -105,7 +106,7 @@ p {
 }
 .button:hover {
   color: #fff;
-  box-shadow: inset 400px 0 0 0 #3597d9;
+  box-shadow: inset 400px 0 0 0 #3597d9, rgba(0, 0, 0, 0.24) 0px 2px 6px;
 }
 .button:hover svg {
   opacity: 1;
@@ -752,6 +753,14 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 .footer {
   background-color: #00337e;
 }
+.footer .brand {
+  max-width: 100%;
+}
+@media only screen and (min-width: 576px) {
+  .footer .brand {
+    max-width: 463px;
+  }
+}
 .footer .brand__image {
   width: 50px;
   height: 50px;
@@ -764,4 +773,67 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 .footer .brand__name h2 {
   color: #fff;
   text-shadow: 0px 3px 3px rgb(6, 21, 49);
+}
+.footer .brand__privacy {
+  padding-top: 16px;
+  color: #d0cece;
+  font-size: 17px;
+}
+.footer__menu {
+  width: 100%;
+  gap: 42px;
+}
+@media only screen and (min-width: 576px) {
+  .footer__menu {
+    width: auto;
+  }
+}
+.footer__menu__navigation {
+  flex-direction: column;
+  gap: 18px;
+}
+@media only screen and (min-width: 576px) {
+  .footer__menu__navigation {
+    flex-direction: row;
+    gap: 28px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__menu__navigation {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer__menu__navigation {
+    flex-direction: row;
+    gap: 48px;
+  }
+}
+.footer__menu__navigation li a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.footer__menu__navigation li a:hover {
+  color: #c0e3fc;
+}
+.footer__menu__social {
+  width: 100%;
+  gap: 0;
+}
+@media only screen and (min-width: 576px) {
+  .footer__menu__social {
+    width: auto;
+    gap: 24px;
+  }
+}
+.footer__menu__social li a {
+  text-decoration: none;
+  width: 48px;
+  height: 48px;
+  transition: background-color 0.3s;
+}
+.footer__menu__social li a:hover {
+  background: #3597d9;
 }
