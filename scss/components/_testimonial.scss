@@ -22,8 +22,8 @@
 
     &__item {
         padding: 40px 24px;
-        background: $primary-color-p100;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background: $white-200; 
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 15px;
         transition: transform .3s;
         border-radius: 4px;
         height: 100%;
@@ -37,7 +37,7 @@
         }
 
         @include lg {
-            transform: scale(0.9);
+            transform: scale(0.87);
         }
 
         &__image {
@@ -103,7 +103,22 @@
 
     .splide {
         padding: 0 16px;
-
+        &__slide {
+            height: 480px;
+            &.is-visible {
+                &.is-active {
+                    height: 460px;
+                    .testimonial {
+                        &__item {
+                            border-radius: 6px;
+                            @include md {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
         @include lg {
             padding: 0 58px;
         }
@@ -138,17 +153,5 @@
         }
     }
 
-    .is-visible {
-        &.is-active {
-            .testimonial {
-                &__item {
-                    border-radius: 6px;
-
-                    @include md {
-                        transform: scale(1);
-                    }
-                }
-            }
-        }
-    }
+    
 }
