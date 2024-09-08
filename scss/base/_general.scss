@@ -136,8 +136,13 @@ p {
   }
 }
 
-// --------------- color styles -----------------
-
+// --------------- form styles -----------------
+input.form-control, select.form-select {
+  &:focus {
+    border-color: $primary-color-p75;
+    box-shadow: 0 0 5px 0px $primary-color-p100;
+  }
+}
 
 // ----------- paragraph styles ---------------
 .paragraph {

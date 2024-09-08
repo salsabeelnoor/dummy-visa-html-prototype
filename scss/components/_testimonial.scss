@@ -23,12 +23,13 @@
     &__item {
         padding: 40px 24px;
         background: $white-200; 
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 15px;
         transition: transform .3s;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 7px;
         border-radius: 4px;
         height: 100%;
-
+        
         @include sm {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 15px;
             padding: 30px 30px;
         }
 
@@ -76,11 +77,11 @@
             color: #000;
             font-size: 14px;
             line-height: 1.75;
+            max-height: 200px;
+            overflow-y: auto;
 
             @include md {
                 font-size: 16px;
-                max-height: 200px;
-                overflow-y: auto;
             }
 
             &::-webkit-scrollbar {
@@ -103,11 +104,22 @@
 
     .splide {
         padding: 0 16px;
+        &__list {
+            height: 420px;
+            @include md {
+                height: 480px;
+            }
+        }
         &__slide {
-            height: 480px;
+            height: 400px;
+            @include md {
+                height: 480px;
+            }
             &.is-visible {
                 &.is-active {
-                    height: 460px;
+                    @include md {
+                        height: 460px;
+                    }
                     .testimonial {
                         &__item {
                             border-radius: 6px;

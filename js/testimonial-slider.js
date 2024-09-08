@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
       991: {
         perPage: 1,
         gap:'24px',
-        height: 'auto'
       },
     },
   });

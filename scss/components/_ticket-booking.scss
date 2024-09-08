@@ -1,0 +1,189 @@
+.tkt-booking {
+    margin-top: 100px;
+
+    @include xl {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__process {
+        list-style: none;
+        padding-left: 0px;
+
+        &__btn {
+            outline: none;
+            border: 0;
+            padding: 12px 16px;
+            border-radius: 8px;
+            background-color: $primary-color-p100;
+            color: $primary-color-p300;
+            font-weight: 600;
+            cursor: auto;
+            @include lg {
+                font-size: 20px;
+            padding: 16px 24px;
+
+            }
+            &.disabled {
+                opacity: 0.5;
+                cursor: no-drop;
+            }
+        }
+    }
+
+    &__form {
+        .title {
+            &--route {
+                color: $primary-color-p400;
+                font-weight: 700;
+                font-size: 28px;
+            }
+        }
+
+        .route-btn {
+            button {
+                outline: 0;
+                border: 0;
+                padding: 10px 20px;
+                font-weight: 500;
+                color: #000;
+                background-color: $primary-color-p50;
+                border: 2px solid $primary-color-p75;
+                transition: all 0.2s ease-in;
+
+                &.one {
+                    border-top-left-radius: 8px;
+                    border-bottom-left-radius: 8px;
+                }
+
+                &.two {
+                    border-top-right-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+
+                &.active {
+                    background-color: $primary-color-p100;
+                    border-color: $primary-color-p200;
+                }
+            }
+        }
+
+        .input {
+            &-label {
+                font-size: 17px;
+                font-weight: 600;
+                color: $primary-color-p300;
+            }
+
+            &-box {
+                position: relative;
+
+                &--w280 {
+                    width: 100%;
+
+                    @include md {
+                        width: 280px;
+                    }
+                }
+
+                &--w120 {
+                    width: 140px;
+                    @include md {
+                        width: 120px;
+                    }
+                }
+
+                &--w100 {
+                    width: 100%;
+                }
+
+                &__icon {
+                    &--plane {
+                        position: absolute;
+                        font-size: 15px;
+                        top: 50%;
+                        left: 8px;
+                        color: $primary-color-p300;
+                        transform: translateY(-50%) rotate(0deg);
+                        transition: transform 0.4s ease-out;
+                    }
+
+                    &--email {
+                        position: absolute;
+                        font-size: 15px;
+                        top: 50%;
+                        left: 8px;
+                        color: $primary-color-p100;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                &__route {
+                    padding-left: 32px;
+
+                    &:focus {
+                        &+.input-box__icon--plane {
+                            transform: translateY(-50%) rotate(90deg);
+                        }
+                    }
+                }
+
+                &__email {
+                    padding-left: 32px;
+                }
+            }
+
+            .return-icon {
+                display: flex;
+                background-color: #fff;
+                border: 1px solid #dee2e6;
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+                border-radius: 50%;
+                z-index: 1;
+
+                i {
+                    color: $primary-color-p300;
+                }
+            }
+
+            .disable-return-way {
+                display: none;
+            }
+
+            .cross-icon {
+                border: 0;
+                width: 100%;
+                height: 32px;
+                background-color: $primary-color-p75;
+                color: $primary-color-p300;
+                border-radius: 8px;
+                @include md {
+                    width: 40px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .add-passenger-btn {
+            width: 100%;
+            outline: none;
+            border: 0;
+            background-color: $primary-color-p100;
+            padding-block: 8px;
+            border-radius: 8px;
+
+            &:hover {
+                background-color: $primary-color-p200;
+            }
+
+            i {
+                color: $primary-color-p300;
+                font-size: 20px;
+                @include lg {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
