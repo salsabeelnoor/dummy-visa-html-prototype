@@ -1,12 +1,10 @@
 .tkt-booking {
     margin-top: 120px;
     min-height: 70vh;
-
     @include xl {
         display: grid;
         grid-template-columns: 2fr 1fr;
         column-gap: 50px;
-
     }
 
     &__process {
@@ -213,9 +211,8 @@
     }
 
     &__invoice {
-        // border: 2px solid red;
         .invoice {
-            width: 90%;
+            width: 100%;
             margin-inline: auto;
             padding-inline: 16px;
             padding-block: 28px 32px;
@@ -223,6 +220,18 @@
             box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
             position: sticky;
             top: 62px;
+            @include sm {
+                width: 90%;
+            }
+            @include md {
+                width: 55%;
+            }
+            @include lg {
+                width: 50%;
+            }
+            @include xl {
+                width: 90%;
+            }
             &--title {
                 // border: 2px solid red;
                 padding-block: 8px;

@@ -83,16 +83,18 @@ p {
   outline: none;
   border: 0;
   padding: 10px 24px;
-  width: 200px;
-  display: flex;
-  transition: box-shadow 0.4s ease-in;
-  background-color: #c0e3fc;
   font-weight: 700;
   color: #00255a;
-  box-shadow: inset 0 0 0 0 #3597d9, rgba(0, 0, 0, 0.24) 0px 2px 6px;
   border-radius: 8px;
 }
-.button svg {
+.button--primary {
+  display: flex;
+  width: 200px;
+  transition: box-shadow 0.4s ease-in;
+  background-color: #c0e3fc;
+  box-shadow: inset 0 0 0 0 #3597d9, rgba(0, 0, 0, 0.24) 0px 2px 6px;
+}
+.button--primary svg {
   position: absolute;
   left: 0;
   opacity: 0;
@@ -102,22 +104,65 @@ p {
   margin-left: -12px;
   transform: translateX(-10px);
 }
-.button .btn-text {
+.button--primary .btn-text {
   transition: all 0.2s ease-in;
 }
-.button:hover {
+.button--primary:hover {
   color: #fff;
   box-shadow: inset 400px 0 0 0 #3597d9, rgba(0, 0, 0, 0.24) 0px 2px 6px;
 }
-.button:hover svg {
+.button--primary:hover svg {
   opacity: 1;
   transform: translateX(0px);
 }
-.button:hover .btn-text {
+.button--primary:hover .btn-text {
   transform: translateX(12px);
 }
+.button--secondary {
+  display: flex;
+  width: 200px;
+  background-color: #c0e3fc;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 6px;
+}
+.button--secondary svg {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  stroke: #00255a;
+  stroke-width: 3px;
+  transition: opacity 0.2s ease-in, transform 0.3s ease-in;
+  margin-left: -12px;
+  transform: translateX(-10px);
+}
+.button--secondary .btn-text {
+  transition: all 0.2s ease-in;
+}
+.button--secondary:hover svg {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.button--secondary:hover .btn-text {
+  transform: translateX(12px);
+}
+.button--back {
+  background-color: #bfbfbf;
+  transition: background-color 0.2s ease-in;
+}
+.button--back:hover {
+  background-color: #afadad;
+}
+.button--solid {
+  background-color: #00337e;
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in;
+}
+.button--solid:hover {
+  background-color: #00255a;
+}
 
-input.form-control:focus, select.form-select:focus {
+input.form-control:focus,
+select.form-select:focus {
   border-color: #c0e3fc;
   box-shadow: 0 0 5px 0px #80b0d2;
 }
@@ -141,12 +186,20 @@ input.form-control:focus, select.form-select:focus {
     font-size: 20px;
   }
 }
-
-.text-color-p200 {
-  color: #00337e;
+.paragraph-large {
+  font-size: 20px;
+}
+@media only screen and (min-width: 992px) {
+  .paragraph-large {
+    font-size: 24px;
+  }
 }
 
 .text-color-p300 {
+  color: #00337e;
+}
+
+.text-color-p400 {
   color: #00255a;
 }
 
@@ -1046,7 +1099,7 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   }
 }
 .tkt-booking__invoice .invoice {
-  width: 90%;
+  width: 100%;
   margin-inline: auto;
   padding-inline: 16px;
   padding-block: 28px 32px;
@@ -1054,6 +1107,26 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
   position: sticky;
   top: 62px;
+}
+@media only screen and (min-width: 576px) {
+  .tkt-booking__invoice .invoice {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .tkt-booking__invoice .invoice {
+    width: 55%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .tkt-booking__invoice .invoice {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .tkt-booking__invoice .invoice {
+    width: 90%;
+  }
 }
 .tkt-booking__invoice .invoice--title {
   padding-block: 8px;
@@ -1077,4 +1150,17 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 }
 .tkt-booking__invoice table tbody td {
   padding: 8px 0px 8px 8px;
+}
+
+.booking-details {
+  margin-top: 100px;
+}
+.booking-details .info .info-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #00337e;
+}
+.booking-details .info-txt {
+  color: #5f5a5a;
+  font-size: 18px;
 }
