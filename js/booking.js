@@ -6,7 +6,12 @@ const disableReturnWay = document.querySelectorAll(".disable-return-way");
 const addPassengerBtn = document.getElementById("add-passenger-btn");
 const passengerDetailsBlock = document.getElementById("passenger-details");
 const deletePassengerBtn = document.getElementById("delete-passenger")
+const detailsBox = document.querySelectorAll('.details-box');
+const nextBtn = document.getElementById('next-btn');
+const prevBtn = document.getElementById('prev-btn');
+const nextProcessBtn = document.querySelectorAll('.tkt-booking__process__btn');
 let passengerCount = 1;
+let countNextBtn = 0;
 const toggleActiveBtn = (buttonID) => {
   if (buttonID === "one-way") {
     oneWayBtn.classList.add("active");
@@ -67,8 +72,48 @@ const deletePassenger = (passengerID) =>{
     selectedPassenger.remove()
 }
 
+const goToNextStep = (event) => {
+  countNextBtn += 1;
+  if(countNextBtn === 1) {
+    event.preventDefault();
+    detailsBox[0].classList.remove('active');
+    detailsBox[1].classList.add('active');
+    nextProcessBtn[1].classList.remove('disabled');
+    prevBtn.classList.remove('d-none');
+  }
+  else if(countNextBtn === 2) {
+    event.preventDefault();
+    detailsBox[1].classList.remove('active');
+    detailsBox[2].classList.add('active');
+    nextProcessBtn[2].classList.remove('disabled');
+  }
+  else if(countNextBtn === 3) {
+    countNextBtn = 0;
+    nextBtn.setAttribute('href', 'payment.html');
+  }
+}
+const goToPrevStep = () => {
+  countNextBtn -= 1;
+  if(countNextBtn === 0) {
+    detailsBox[1].classList.remove('active');
+    detailsBox[0].classList.add('active');
+    nextProcessBtn[1].classList.add('disabled');
+    prevBtn.classList.add('d-none');
+  }
+  if(countNextBtn === 1) {
+    detailsBox[2].classList.remove('active');
+    detailsBox[1].classList.add('active');
+    nextProcessBtn[2].classList.add('disabled');
+  }
+}
+
 oneWayBtn.addEventListener("click", () => toggleActiveBtn("one-way"));
 roundWayBtn.addEventListener("click", () => toggleActiveBtn("round-way"));
 rcvNowBtn.addEventListener("click", () => toggleActiveBtn("rcv-now"));
 rcvLaterBtn.addEventListener("click", () => toggleActiveBtn("rcv-later"));
 addPassengerBtn.addEventListener("click", () => addNewPassengerBlock());
+nextBtn.addEventListener('click', (event) => {
+ goToNextStep(event);
+});
+prevBtn.addEventListener('click', () => goToPrevStep());
+

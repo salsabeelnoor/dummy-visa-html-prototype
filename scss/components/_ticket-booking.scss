@@ -1,11 +1,11 @@
 .tkt-booking {
     margin-top: 100px;
-
+    
     @include xl {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 2fr 1fr;
+        column-gap: 120px;
     }
-
     &__process {
         list-style: none;
         padding-left: 0px;
@@ -32,6 +32,12 @@
     }
 
     &__form {
+        .details-box{
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
         .title {
             &--route {
                 color: $primary-color-p400;
@@ -96,6 +102,12 @@
                 &--w100 {
                     width: 100%;
                 }
+                &--w80 {
+                    width: 100%;
+                    @include md {
+                        width: 80%;
+                    }
+                }
 
                 &__icon {
                     &--plane {
@@ -149,7 +161,7 @@
             }
 
             .disable-return-way {
-                display: none;
+                display: none !important;
             }
 
             .cross-icon {

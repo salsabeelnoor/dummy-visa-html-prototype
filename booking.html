@@ -72,7 +72,7 @@
                     </li>
                 </ul>
                 <div class="tkt-booking__form">
-                    <div class="route-details ">
+                    <div class="route-details details-box active">
                         <h2 class="title--route">Route: </h2>
                         <div class="route-btn d-flex gap-0">
                             <button id="one-way" class="one active">One Way</button>
@@ -97,20 +97,20 @@
                         </div>
                         <div class="input mt-4">
                             <p class="input-label mb-2">Date</p>
-                            <div class="input--wrapper d-flex align-items-center">
-                                <div class="input-box input-box--w280 me-2">
+                            <div class="input--wrapper d-flex flex-column flex-md-row align-items-center gap-3 gap-md-0">
+                                <div class="input-box input-box--w280 me-md-2">
                                     <input type="date" class="form-control input-box__date" placeholder="Journey Date">
                                 </div>
-                                <div class="return-icon justify-content-center align-items-center disable-return-way">
+                                <div class="return-icon justify-content-center align-items-center disable-return-way d-none d-md-flex">
                                     <i class="fa-solid fa-calendar-days"></i>
                                 </div>
-                                <div class="input-box input-box--w280 ms-2 disable-return-way">
+                                <div class="input-box input-box--w280 ms-md-2 disable-return-way">
                                     <input type="date" class="form-control input-box__date" placeholder="Return Date">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="passenger-details d-none">
+                    <div class="passenger-details details-box">
                         <div class="input mt-4">
                             <p class="input-label mb-2">Contact Details</p>
                             <div class="input--wrapper d-flex align-items-center">
@@ -152,7 +152,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="additional-details d-none">
+                    <div class="additional-details details-box">
                         <div class="input">
                             <p class="input-label mb-2">Receive Ticket</p>
                             <div class="route-btn d-flex gap-0">
@@ -162,7 +162,7 @@
                         </div>
                         <div class="input mt-4">
                             <p class="input-label mb-2">Purpose to buy dummy ticket</p>
-                            <select class="form-select" aria-label="Default select example">
+                            <select class="form-select input-box--w80" aria-label="Default select example">
                                 <option selected>Select Purpose</option>
                                 <option value="1">Visa Submission Application</option>
                                 <option value="2">Proof of Return</option>
@@ -172,20 +172,32 @@
                             </select>
                         </div>
                     </div>
-                    <button class="button button--primary d-flex justify-content-center mt-4">
-                        <div class="d-flex align-items-center position-relative">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" class="">
-                                <path d="M14 5L21 12M21 12L14 19M21 12L3 12" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                            <span class="d-inline-block btn-text">Next</span>
-                        </div>
-                    </button>
+                    <div class="btn-box d-flex gap-3">
+                        <button id="prev-btn" class="button button--primary d-none justify-content-center mt-4">
+                            <div class="d-flex align-items-center position-relative">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="transform: rotate(180deg);"
+                                    xmlns="http://www.w3.org/2000/svg" class="">
+                                    <path d="M14 5L21 12M21 12L14 19M21 12L3 12" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                                <span class="d-inline-block btn-text">Previous</span>
+                            </div>
+                        </button>
+                        <a href="" id="next-btn" class="button button--primary d-flex justify-content-center mt-4">
+                            <div class="d-flex align-items-center position-relative">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="">
+                                    <path d="M14 5L21 12M21 12L14 19M21 12L3 12" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                                <span class="d-inline-block btn-text">Next</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="tkt-booking__select">
-                <h2>Select Your Flight: </h2>
+            <div class="tkt-booking__select mt-4 mt-lg-0">
+                <!-- <h2>Select Your Flight: </h2> -->
             </div>
 
         </div>

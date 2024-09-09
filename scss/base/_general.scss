@@ -98,7 +98,7 @@ p {
   border: 0;
   padding: 10px 24px;
   width: 200px;
-  // border: 2px solid transparent;
+  display: flex;
   transition: box-shadow 0.5s ease-in;
   background-color: $primary-color-p75;
   font-weight: 700;
