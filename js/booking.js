@@ -5,11 +5,13 @@ const rcvLaterBtn = document.getElementById("rcv-later");
 const disableReturnWay = document.querySelectorAll(".disable-return-way");
 const addPassengerBtn = document.getElementById("add-passenger-btn");
 const passengerDetailsBlock = document.getElementById("passenger-details");
-const deletePassengerBtn = document.getElementById("delete-passenger")
-const detailsBox = document.querySelectorAll('.details-box');
-const nextBtn = document.getElementById('next-btn');
-const prevBtn = document.getElementById('prev-btn');
-const nextProcessBtn = document.querySelectorAll('.tkt-booking__process__btn');
+const deletePassengerBtn = document.getElementById("delete-passenger");
+const detailsBox = document.querySelectorAll(".details-box");
+const nextBtn = document.getElementById("next-btn");
+const prevBtn = document.getElementById("prev-btn");
+const nextProcessBtn = document.querySelectorAll(".tkt-booking__process__btn");
+const passengerCountText = document.getElementById("passenger-count");
+const tktPrice = document.querySelectorAll(".price");
 let passengerCount = 1;
 let countNextBtn = 0;
 const toggleActiveBtn = (buttonID) => {
@@ -39,7 +41,7 @@ const toggleActiveBtn = (buttonID) => {
 };
 
 const addNewPassengerBlock = () => {
-    passengerCount += 1;
+  passengerCount += 1;
   const newPassenger = `
     <div id='passenger--${passengerCount}' class="input--wrapper d-flex flex-column flex-md-row align-items-center gap-3 gap-md-0 mt-3">
         <div class="d-flex align-items-center">
@@ -64,56 +66,65 @@ const addNewPassengerBlock = () => {
         </button>
     </div>
     `;
-    passengerDetailsBlock.insertAdjacentHTML("beforeend", newPassenger);
+  passengerDetailsBlock.insertAdjacentHTML("beforeend", newPassenger);
+  passengerCountText.innerHTML = `${passengerCount} Passenger`;
+  tktPrice.forEach((element) => {
+    element.innerHTML = `$${passengerCount * 10}`;
+  });
 };
 
-const deletePassenger = (passengerID) =>{
-    const selectedPassenger = document.getElementById(`passenger--${passengerID}`);
-    selectedPassenger.remove()
-}
+const deletePassenger = (passengerID) => {
+  passengerCount -= 1;
+  const selectedPassenger = document.getElementById(
+    `passenger--${passengerID}`
+  );
+  selectedPassenger.remove();
+  passengerCountText.innerHTML = `${passengerCount} Passenger`;
+  tktPrice.forEach((element) => {
+    element.innerHTML = `$${passengerCount * 10}`;
+  });
+};
 
 const goToNextStep = (event) => {
   countNextBtn += 1;
-  if(countNextBtn === 1) {
+  if (countNextBtn === 1) {
     event.preventDefault();
-    detailsBox[0].classList.remove('active');
-    detailsBox[1].classList.add('active');
-    nextProcessBtn[1].classList.remove('disabled');
-    prevBtn.classList.remove('d-none');
-  }
-  else if(countNextBtn === 2) {
+    detailsBox[0].classList.remove("active");
+    detailsBox[1].classList.add("active");
+    nextProcessBtn[1].classList.remove("disabled");
+    prevBtn.classList.remove("d-none");
+  } else if (countNextBtn === 2) {
     event.preventDefault();
-    detailsBox[1].classList.remove('active');
-    detailsBox[2].classList.add('active');
-    nextProcessBtn[2].classList.remove('disabled');
-  }
-  else if(countNextBtn === 3) {
+    detailsBox[1].classList.remove("active");
+    detailsBox[2].classList.add("active");
+    nextProcessBtn[2].classList.remove("disabled");
+  } else if (countNextBtn === 3) {
     countNextBtn = 0;
-    nextBtn.setAttribute('href', 'payment.html');
+    nextBtn.setAttribute("href", "booking-details.html");
   }
-}
+};
+
 const goToPrevStep = () => {
   countNextBtn -= 1;
-  if(countNextBtn === 0) {
-    detailsBox[1].classList.remove('active');
-    detailsBox[0].classList.add('active');
-    nextProcessBtn[1].classList.add('disabled');
-    prevBtn.classList.add('d-none');
+  if (countNextBtn === 0) {
+    detailsBox[1].classList.remove("active");
+    detailsBox[0].classList.add("active");
+    nextProcessBtn[1].classList.add("disabled");
+    prevBtn.classList.add("d-none");
   }
-  if(countNextBtn === 1) {
-    detailsBox[2].classList.remove('active');
-    detailsBox[1].classList.add('active');
-    nextProcessBtn[2].classList.add('disabled');
+  if (countNextBtn === 1) {
+    detailsBox[2].classList.remove("active");
+    detailsBox[1].classList.add("active");
+    nextProcessBtn[2].classList.add("disabled");
   }
-}
+};
 
 oneWayBtn.addEventListener("click", () => toggleActiveBtn("one-way"));
 roundWayBtn.addEventListener("click", () => toggleActiveBtn("round-way"));
 rcvNowBtn.addEventListener("click", () => toggleActiveBtn("rcv-now"));
 rcvLaterBtn.addEventListener("click", () => toggleActiveBtn("rcv-later"));
 addPassengerBtn.addEventListener("click", () => addNewPassengerBlock());
-nextBtn.addEventListener('click', (event) => {
- goToNextStep(event);
+nextBtn.addEventListener("click", (event) => {
+  goToNextStep(event);
 });
-prevBtn.addEventListener('click', () => goToPrevStep());
-
+prevBtn.addEventListener("click", () => goToPrevStep());
