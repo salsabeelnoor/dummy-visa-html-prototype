@@ -58,7 +58,7 @@
 
     <!-- tkt-booking -->
     <section class="container">
-        <div class="tkt-booking">
+        <div class="tkt-booking ">
             <div class="tkt-booking--wrapper">
                 <ul class="tkt-booking__process d-flex flex-wrap gap-1 gap-sm-2">
                     <li class="tkt-booking__process__btn">
@@ -97,11 +97,13 @@
                         </div>
                         <div class="input mt-4">
                             <p class="input-label mb-2">Date</p>
-                            <div class="input--wrapper d-flex flex-column flex-md-row align-items-center gap-3 gap-md-0">
+                            <div
+                                class="input--wrapper d-flex flex-column flex-md-row align-items-center gap-3 gap-md-0">
                                 <div class="input-box input-box--w280 me-md-2">
                                     <input type="date" class="form-control input-box__date" placeholder="Journey Date">
                                 </div>
-                                <div class="return-icon justify-content-center align-items-center disable-return-way d-none d-md-flex">
+                                <div
+                                    class="return-icon justify-content-center align-items-center disable-return-way d-none d-md-flex">
                                     <i class="fa-solid fa-calendar-days"></i>
                                 </div>
                                 <div class="input-box input-box--w280 ms-md-2 disable-return-way">
@@ -123,7 +125,8 @@
                         <div class="input--passenger">
                             <div id="passenger-details" class="input mt-4">
                                 <p class="input-label mb-2">Passenger Details</p>
-                                <div id="passenger--1" class="input--wrapper d-flex flex-column flex-md-row align-items-center gap-3 gap-md-0">
+                                <div id="passenger--1"
+                                    class="input--wrapper d-flex flex-column flex-md-row align-items-center gap-3 gap-md-0">
                                     <div class="d-flex align-items-center">
                                         <p class="me-3 fw-semibold paragraph-medium">1</p>
                                         <div class="input-box input-box--w120 me-md-2">
@@ -175,8 +178,8 @@
                     <div class="btn-box d-flex gap-3">
                         <button id="prev-btn" class="button button--primary d-none justify-content-center mt-4">
                             <div class="d-flex align-items-center position-relative">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="transform: rotate(180deg);"
-                                    xmlns="http://www.w3.org/2000/svg" class="">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    style="transform: rotate(180deg);" xmlns="http://www.w3.org/2000/svg" class="">
                                     <path d="M14 5L21 12M21 12L14 19M21 12L3 12" stroke-linecap="round"
                                         stroke-linejoin="round"></path>
                                 </svg>
@@ -196,8 +199,30 @@
                     </div>
                 </div>
             </div>
-            <div class="tkt-booking__select mt-4 mt-lg-0">
-                <!-- <h2>Select Your Flight: </h2> -->
+            <div class="tkt-booking__invoice mt-4 mt-lg-0">
+                <div class="invoice">
+                    <div class="invoice--title">
+                        <h3 class="text-center mb-0">Order Summary</h3>
+                    </div>
+                    <table class="invoice-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span id="passenger-count">1 Passenger</span> Cost</td>
+                                <td class="price"><span>$10</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td class="price">$10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
         </div>

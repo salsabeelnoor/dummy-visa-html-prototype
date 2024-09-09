@@ -85,7 +85,7 @@ p {
   padding: 10px 24px;
   width: 200px;
   display: flex;
-  transition: box-shadow 0.5s ease-in;
+  transition: box-shadow 0.4s ease-in;
   background-color: #c0e3fc;
   font-weight: 700;
   color: #00255a;
@@ -98,7 +98,7 @@ p {
   opacity: 0;
   stroke: #fff;
   stroke-width: 3px;
-  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+  transition: opacity 0.2s ease-in, transform 0.3s ease-in;
   margin-left: -12px;
   transform: translateX(-10px);
 }
@@ -867,13 +867,14 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 }
 
 .tkt-booking {
-  margin-top: 100px;
+  margin-top: 120px;
+  min-height: 70vh;
 }
 @media only screen and (min-width: 1200px) {
   .tkt-booking {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    column-gap: 120px;
+    column-gap: 50px;
   }
 }
 .tkt-booking__process {
@@ -1043,4 +1044,37 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   .tkt-booking__form .add-passenger-btn i {
     font-size: 24px;
   }
+}
+.tkt-booking__invoice .invoice {
+  width: 90%;
+  margin-inline: auto;
+  padding-inline: 16px;
+  padding-block: 28px 32px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  position: sticky;
+  top: 62px;
+}
+.tkt-booking__invoice .invoice--title {
+  padding-block: 8px;
+  border-radius: 8px;
+  background-color: rgba(228, 243, 251, 0.9019607843);
+  margin-bottom: 24px;
+}
+.tkt-booking__invoice .invoice--title h3 {
+  font-weight: 600;
+  color: #00337e;
+}
+.tkt-booking__invoice table {
+  width: 100%;
+}
+.tkt-booking__invoice table thead th {
+  border-bottom: 2px dashed #000;
+  padding: 8px 0px 8px 8px;
+}
+.tkt-booking__invoice table tbody tr:not(:last-child) {
+  border-bottom: 2px solid #666;
+}
+.tkt-booking__invoice table tbody td {
+  padding: 8px 0px 8px 8px;
 }

@@ -99,7 +99,7 @@ p {
   padding: 10px 24px;
   width: 200px;
   display: flex;
-  transition: box-shadow 0.5s ease-in;
+  transition: box-shadow 0.4s ease-in;
   background-color: $primary-color-p75;
   font-weight: 700;
   color: $primary-color-p400;
@@ -111,7 +111,7 @@ p {
     opacity: 0;
     stroke: #fff;
     stroke-width: 3px;
-    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+    transition: opacity 0.2s ease-in, transform 0.3s ease-in;
     margin-left: -12px;
     transform: translateX(-10px);
   }

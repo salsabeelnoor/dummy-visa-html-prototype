@@ -1,11 +1,14 @@
 .tkt-booking {
-    margin-top: 100px;
-    
+    margin-top: 120px;
+    min-height: 70vh;
+
     @include xl {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        column-gap: 120px;
+        column-gap: 50px;
+
     }
+
     &__process {
         list-style: none;
         padding-left: 0px;
@@ -19,11 +22,13 @@
             color: $primary-color-p300;
             font-weight: 600;
             cursor: auto;
+
             @include lg {
                 font-size: 20px;
-            padding: 16px 24px;
+                padding: 16px 24px;
 
             }
+
             &.disabled {
                 opacity: 0.5;
                 cursor: no-drop;
@@ -32,12 +37,14 @@
     }
 
     &__form {
-        .details-box{
+        .details-box {
             display: none;
+
             &.active {
                 display: block;
             }
         }
+
         .title {
             &--route {
                 color: $primary-color-p400;
@@ -94,6 +101,7 @@
 
                 &--w120 {
                     width: 140px;
+
                     @include md {
                         width: 120px;
                     }
@@ -102,8 +110,10 @@
                 &--w100 {
                     width: 100%;
                 }
+
                 &--w80 {
                     width: 100%;
+
                     @include md {
                         width: 80%;
                     }
@@ -171,12 +181,14 @@
                 background-color: $primary-color-p75;
                 color: $primary-color-p300;
                 border-radius: 8px;
+
                 @include md {
                     width: 40px;
                     border-radius: 50%;
                 }
             }
         }
+
         .add-passenger-btn {
             width: 100%;
             outline: none;
@@ -192,8 +204,55 @@
             i {
                 color: $primary-color-p300;
                 font-size: 20px;
+
                 @include lg {
                     font-size: 24px;
+                }
+            }
+        }
+    }
+
+    &__invoice {
+        // border: 2px solid red;
+        .invoice {
+            width: 90%;
+            margin-inline: auto;
+            padding-inline: 16px;
+            padding-block: 28px 32px;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+            position: sticky;
+            top: 62px;
+            &--title {
+                // border: 2px solid red;
+                padding-block: 8px;
+                border-radius: 8px;
+                background-color: $primary-color-p50;
+                margin-bottom: 24px;
+                h3{
+                    font-weight: 600;
+                    color: $primary-color-p300;
+                }
+            }
+        }
+
+        table {
+            width: 100%;
+
+            thead {
+                th {
+                    border-bottom: 2px dashed #000;
+                    padding: 8px 0px 8px 8px;
+                }
+            }
+
+            tbody {
+                tr:not(:last-child) {
+                    border-bottom: 2px solid #666;
+                }
+
+                td {
+                    padding: 8px 0px 8px 8px;
                 }
             }
         }
