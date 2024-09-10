@@ -79,6 +79,11 @@ p {
   font-size: 20px;
 }
 
+button {
+  outline: none;
+  border: 0;
+}
+
 .button {
   outline: none;
   border: 0;
@@ -165,6 +170,16 @@ input.form-control:focus,
 select.form-select:focus {
   border-color: #c0e3fc;
   box-shadow: 0 0 5px 0px #80b0d2;
+}
+
+input[type=number] {
+  -moz-appearance: textfield !important;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .paragraph-normal {
@@ -318,30 +333,15 @@ select.form-select:focus {
   min-height: 65vh;
   position: relative;
   margin-top: 62px;
+  background-image: linear-gradient(to left, rgba(26, 43, 61, 0) 0%, rgba(16, 36, 40, 0.65) 100%), url(../../assets/Banner-image-5.jpg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media only screen and (min-width: 576px) {
   .hero {
-    min-height: 50vh;
+    min-height: 70vh;
   }
-}
-.hero__bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-}
-.hero__bg__video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.hero__bg__gradient {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(270deg, rgba(26, 43, 61, 0) 0%, rgba(20, 55, 61, 0.6509803922) 100%);
 }
 .hero__content {
   color: #fff;
@@ -1152,15 +1152,208 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   padding: 8px 0px 8px 8px;
 }
 
-.booking-details {
+.pay {
   margin-top: 100px;
 }
-.booking-details .info .info-label {
+.pay .booking-details {
+  width: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .pay .booking-details {
+    width: 50%;
+  }
+}
+.pay .booking-details .info .info-label {
   font-size: 18px;
   font-weight: 700;
   color: #00337e;
 }
-.booking-details .info-txt {
+.pay .booking-details .info-txt {
   color: #5f5a5a;
   font-size: 18px;
+}
+.pay-block {
+  width: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .pay-block {
+    width: 50%;
+  }
+}
+.pay-block .title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #00337e;
+  margin-bottom: 20px;
+}
+.pay-block .tkt-price {
+  padding: 24px 8px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+  background-color: rgba(228, 243, 251, 0.9019607843);
+  border-radius: 8px;
+}
+@media only screen and (min-width: 992px) {
+  .pay-block .tkt-price {
+    padding: 24px;
+  }
+}
+.pay-block .tkt-price table {
+  width: 100%;
+}
+.pay-block .tkt-price table tr td {
+  padding: 8px;
+  font-size: 18px;
+}
+.pay-block .tkt-price table tr td:last-child {
+  font-weight: 500;
+  color: #00255a;
+  text-align: right;
+}
+.pay-block .tkt-price table tr:last-child td {
+  font-weight: 800;
+  color: #00255a;
+}
+.pay-block .coupon {
+  width: 300px;
+  padding: 16px 12px;
+  background-color: #f6f9fa;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 8px;
+  margin-top: 28px;
+}
+.pay-block .coupon input::placeholder {
+  color: #afadad;
+}
+.pay-block .coupon button {
+  padding: 12px 24px;
+  text-transform: uppercase;
+  background-color: #80b0d2;
+  color: #00337e;
+  font-weight: 700;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in;
+}
+.pay-block .coupon button:hover {
+  border: 2px solid #3597d9;
+  color: #00255a;
+}
+.pay-block .payment {
+  margin-top: 24px;
+}
+.pay-block .payment__method {
+  background-color: #F0F0F0;
+  width: fit-content;
+  border-radius: 8px;
+}
+.pay-block .payment__method__btn {
+  border-radius: 8px;
+  padding: 20px 24px;
+}
+.pay-block .payment__method__btn.active {
+  border: 2px solid #80b0d2;
+  background-color: #c0e3fc;
+  box-shadow: rgba(10, 103, 180, 0.33) 0px 3px 8px;
+}
+.pay-block .payment__method--card {
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  .pay-block .payment__method--card {
+    width: 350px;
+  }
+}
+.pay-block .payment__method--card .search {
+  position: relative;
+}
+.pay-block .payment__method--card .search__btn {
+  padding: 6px 12px;
+  border: 1px solid #dee2e6;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+}
+.pay-block .payment__method--card .search__btn:focus {
+  border-color: #c0e3fc;
+  box-shadow: 0 0 5px 0px #80b0d2;
+}
+.pay-block .payment__method--card .search__btn i {
+  font-size: 14px;
+  transition: transform 0.3s linear;
+}
+.pay-block .payment__method--card .search__content {
+  position: absolute;
+  display: none;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+  padding: 20px 16px 0px 16px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+.pay-block .payment__method--card .search__content__input {
+  position: relative;
+}
+.pay-block .payment__method--card .search__content__input input {
+  padding-left: 32px;
+}
+.pay-block .payment__method--card .search__content__input i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #929292;
+  font-size: 15px;
+}
+.pay-block .payment__method--card .search__content__options {
+  padding-left: 0px;
+  list-style: none;
+  margin-top: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.pay-block .payment__method--card .search__content__options::-webkit-scrollbar {
+  width: 6px;
+}
+.pay-block .payment__method--card .search__content__options::-webkit-scrollbar-track {
+  background: #a1d7fd;
+  border-radius: 40px;
+}
+.pay-block .payment__method--card .search__content__options::-webkit-scrollbar-thumb {
+  background-color: #5897c4;
+  border-radius: 40px;
+}
+.pay-block .payment__method--card .search__content__options li {
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pay-block .payment__method--card .search__content__options li:is(:hover, .selected) {
+  background-color: rgba(228, 243, 251, 0.9019607843);
+}
+.pay-block .payment__method--card .search.active .search__btn i {
+  transform: rotate(-180deg);
+}
+.pay-block .payment__method--card .search.active .search__content {
+  display: block;
+}
+.pay-block .payment__method--card .card-info .input-field label {
+  color: #00255a;
+  font-weight: 600;
+}
+.pay-block .payment__method--card .card-info .input-field input::placeholder {
+  color: #929292;
+}
+.pay-block .payment-btn {
+  padding-block: 12px;
+  border-radius: 8px;
+  background-color: #c0e3fc;
+  color: #00337e;
+  font-size: 18px;
+  font-weight: 800;
+  transition: background-color 0.2s ease;
+}
+.pay-block .payment-btn:hover {
+  background-color: #a2d0f1;
 }

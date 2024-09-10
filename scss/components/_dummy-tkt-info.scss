@@ -1,13 +1,11 @@
 .dummy-tkt-info {
     &--left {
         width: 100%;
-
         @include md {
             &.image {
                 width: 60%;
             }
         }
-
         @include lg {
             width: 50%;
 

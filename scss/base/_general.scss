@@ -93,6 +93,10 @@ p {
 }
 
 //----------- button styles -----------
+button {
+  outline: none;
+  border: 0;
+}
 .button {
   outline: none;
   border: 0;
@@ -205,6 +209,14 @@ select.form-select {
     border-color: $primary-color-p75;
     box-shadow: 0 0 5px 0px $primary-color-p100;
   }
+}
+input[type=number] {
+  -moz-appearance:textfield !important;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 // ----------- paragraph styles ---------------

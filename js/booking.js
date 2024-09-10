@@ -100,7 +100,7 @@ const goToNextStep = (event) => {
     nextProcessBtn[2].classList.remove("disabled");
   } else if (countNextBtn === 3) {
     countNextBtn = 0;
-    nextBtn.setAttribute("href", "booking-details.html");
+    nextBtn.setAttribute("href", "payment.html");
   }
 };
 
