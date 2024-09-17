@@ -235,7 +235,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 @media only screen and (min-width: 1200px) {
   .navbar.nav {
-    padding: 10px 0px;
+    padding: 16px 0px;
   }
 }
 .navbar.nav.scroll-change {
@@ -332,7 +332,7 @@ input[type=number]::-webkit-inner-spin-button {
 .hero {
   min-height: 65vh;
   position: relative;
-  margin-top: 62px;
+  margin-top: 72px;
   background-image: linear-gradient(to left, rgba(26, 43, 61, 0) 0%, rgba(16, 36, 40, 0.65) 100%), url(../../assets/Banner-image-5.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -1242,24 +1242,27 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   margin-top: 24px;
 }
 .pay-block .payment__method {
-  background-color: #F0F0F0;
+  background-color: #f6f9fa;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   width: fit-content;
   border-radius: 8px;
 }
 .pay-block .payment__method__btn {
   border-radius: 8px;
   padding: 20px 24px;
+  border: 2px solid transparent;
+  font-weight: 500;
 }
 .pay-block .payment__method__btn.active {
   border: 2px solid #80b0d2;
   background-color: #c0e3fc;
   box-shadow: rgba(10, 103, 180, 0.33) 0px 3px 8px;
 }
-.pay-block .payment__method--card {
+.pay-block .payment__method__content {
   width: 100%;
 }
 @media only screen and (min-width: 1200px) {
-  .pay-block .payment__method--card {
+  .pay-block .payment__method__content {
     width: 350px;
   }
 }
@@ -1356,4 +1359,11 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 }
 .pay-block .payment-btn:hover {
   background-color: #a2d0f1;
+}
+.pay-block .payment__paypal .button {
+  width: 100%;
+  background-color: #f2ba36;
+}
+.pay-block .payment__paypal .button-paypal img {
+  height: 24px;
 }
