@@ -1437,19 +1437,41 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 }
 
 .overview__content {
-  width: 50%;
+  width: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .overview__content {
+    width: 50%;
+  }
 }
 .overview__content h1 {
   color: #00255a;
+  text-align: center;
+}
+@media only screen and (min-width: 992px) {
+  .overview__content h1 {
+    text-align: start;
+  }
 }
 .overview__content p {
   color: #000;
   font-size: 17px;
   line-height: 30px;
+  text-align: center;
+}
+@media only screen and (min-width: 992px) {
+  .overview__content p {
+    text-align: start;
+  }
 }
 .overview__image {
-  width: 45%;
+  width: 100%;
   background-color: #fff;
+}
+@media only screen and (min-width: 992px) {
+  .overview__image {
+    width: 45%;
+  }
 }
 .overview__image figure {
   position: relative;
@@ -1458,7 +1480,7 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   background: #ffffff;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .overview__image figure::before {
   position: absolute;
@@ -1483,6 +1505,24 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.join-us__content {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #f6f9fa;
+  padding: 50px 30px;
+  border-radius: 8px;
+}
+.join-us__content h1, .join-us__content p {
+  text-align: center;
+}
+.join-us__content h1 {
+  color: #00255a;
+}
+.join-us__content p {
+  color: #000;
+  font-size: 17px;
+  line-height: 28px;
 }
 
 @keyframes shine {

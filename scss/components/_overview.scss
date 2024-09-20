@@ -1,19 +1,33 @@
 .overview {
     &__content {
-        width: 50%;
+        width: 100%;
+        @include lg {
+            width: 50%;
+        }
         h1 {
             color: $primary-color-p400;
+            text-align: center;
+
+            @include lg {
+                text-align: start;
+            }
         }
         p {
             color: #000;
             font-size: 17px;
             line-height: 30px;
+            text-align: center;
+            @include lg {
+                text-align: start;
+            }
         }
     }
     &__image {
-        width: 45%;
+        width: 100%;
         background-color: #fff;
-
+        @include lg {
+            width: 45%;
+        }
         figure {
             position: relative;
             display: block;
@@ -21,7 +35,7 @@
             background: #ffffff;
             padding: 15px;
             border-radius: 10px;
-            box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
             &::before {
                 position: absolute;
