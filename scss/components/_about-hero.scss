@@ -1,0 +1,27 @@
+.about-hero{
+    min-height: 50vh;
+    position: relative;
+    margin-top: 62px;
+    background-image: linear-gradient(to top, rgb(37 42 45 / 54%) 0%, rgb(10 82 109 / 58%) 100%), url(../../assets/about-us-3.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    @include xl {
+        margin-top: 72px;
+    }
+    &__content{
+        color: #fff;
+        h1 {
+            text-shadow: 0px 3px 3px rgb(101 101 101);
+            font-weight: 700;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            @include md {
+                width: 680px;
+            }
+        }
+    }
+}
