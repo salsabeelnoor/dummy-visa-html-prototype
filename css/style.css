@@ -1422,24 +1422,36 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 }
 @media only screen and (min-width: 1200px) {
   .our-story__paragraph {
-    max-width: 1100px;
+    max-width: 1150px;
   }
 }
 .our-story__paragraph p {
   margin-bottom: 16px;
   text-align: center;
-  line-height: 24px;
-  font-size: 16px;
+  line-height: 28px;
+  font-size: 17px;
   color: #000;
 }
 .our-story__paragraph p a:hover {
   text-decoration: underline;
 }
-.our-story__image {
+
+.overview__content {
+  width: 50%;
+}
+.overview__content h1 {
+  color: #00255a;
+}
+.overview__content p {
+  color: #000;
+  font-size: 17px;
+  line-height: 30px;
+}
+.overview__image {
   width: 45%;
   background-color: #fff;
 }
-.our-story__image figure {
+.overview__image figure {
   position: relative;
   display: block;
   overflow: hidden;
@@ -1448,26 +1460,26 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   border-radius: 10px;
   box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.2);
 }
-.our-story__image figure::before {
+.overview__image figure::before {
   position: absolute;
   top: 0;
   left: -75%;
   display: block;
   content: "";
-  width: 60%;
+  width: 50%;
   height: 100%;
-  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.17) 100%);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.17)));
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.17) 100%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
   -webkit-transform: skewX(-25deg);
   -ms-transform: skewX(-25deg);
   transform: skewX(-25deg);
 }
-.our-story__image figure:hover::before {
+.overview__image figure:hover::before {
   animation: shine 0.5s linear;
 }
-.our-story__image figure img {
-  border-radius: 10px;
+.overview__image figure img {
+  border-radius: 4px;
   width: 100%;
   height: 100%;
   object-fit: cover;
