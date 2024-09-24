@@ -3,12 +3,13 @@
     position: relative;
     margin-top: 62px;
     background-image: linear-gradient(to top, rgb(37 42 45 / 54%) 0%, rgb(10 82 109 / 58%) 100%), url(../../assets/contact.jpg);
-    background-position: center calc(50% - 88px + 0.833vw);
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: local;
     @include lg{
         background-attachment: fixed;
+        background-position: center calc(50% - 88px + 0.833vw);
     }
     @include xl {
         margin-top: 72px;

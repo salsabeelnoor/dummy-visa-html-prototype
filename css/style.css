@@ -1552,7 +1552,7 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   position: relative;
   margin-top: 62px;
   background-image: linear-gradient(to top, rgba(37, 42, 45, 0.54) 0%, rgba(10, 82, 109, 0.58) 100%), url(../../assets/contact.jpg);
-  background-position: center calc(50% - 88px + 0.833vw);
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: local;
@@ -1560,6 +1560,7 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 @media only screen and (min-width: 992px) {
   .contact-hero {
     background-attachment: fixed;
+    background-position: center calc(50% - 88px + 0.833vw);
   }
 }
 @media only screen and (min-width: 1200px) {
