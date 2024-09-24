@@ -1398,7 +1398,12 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: local;
+}
+@media only screen and (min-width: 992px) {
+  .about-hero {
+    background-attachment: fixed;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .about-hero {
@@ -1550,7 +1555,12 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   background-position: center calc(50% - 88px + 0.833vw);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: local;
+}
+@media only screen and (min-width: 992px) {
+  .contact-hero {
+    background-attachment: fixed;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .contact-hero {

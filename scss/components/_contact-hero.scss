@@ -6,7 +6,10 @@
     background-position: center calc(50% - 88px + 0.833vw);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: local;
+    @include lg{
+        background-attachment: fixed;
+    }
     @include xl {
         margin-top: 72px;
     }
