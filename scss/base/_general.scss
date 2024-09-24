@@ -181,6 +181,20 @@ button {
 
     }
   }
+  &--pill {
+    padding: 12px 24px;
+    text-transform: uppercase;
+    background-color: #80b0d2;
+    color: #00337e;
+    font-weight: 700;
+    border: 2px solid transparent;
+    transition: all 0.2s ease-in;
+    border-radius: 50rem;
+    &:hover {
+      border: 2px solid #3597d9;
+      color: #00255a;
+    }
+  }
 
   &--back {
     background-color: $white-300;
@@ -204,7 +218,7 @@ button {
 
 // --------------- form styles -----------------
 input.form-control,
-select.form-select {
+select.form-select, textarea.form-control {
   &:focus {
     border-color: $primary-color-p75;
     box-shadow: 0 0 5px 0px $primary-color-p100;
