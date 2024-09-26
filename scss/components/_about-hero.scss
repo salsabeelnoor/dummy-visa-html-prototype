@@ -1,5 +1,5 @@
 .about-hero{
-    min-height: 50vh;
+    min-height: 40vh;
     position: relative;
     margin-top: 62px;
     background-image: linear-gradient(to top, rgb(37 42 45 / 54%) 0%, rgb(10 82 109 / 58%) 100%), url(../../assets/about-us-3.jpg);
@@ -7,6 +7,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: local;
+    @include md {
+        min-height: 50vh;
+    }
     @include lg{
         background-attachment: fixed;
     }
@@ -20,9 +23,9 @@
             font-weight: 700;
         }
         p {
-            font-size: 20px;
             font-weight: 500;
             @include md {
+                font-size: 18px;
                 width: 680px;
             }
         }

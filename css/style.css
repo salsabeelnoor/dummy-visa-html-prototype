@@ -1409,7 +1409,7 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 }
 
 .about-hero {
-  min-height: 50vh;
+  min-height: 40vh;
   position: relative;
   margin-top: 62px;
   background-image: linear-gradient(to top, rgba(37, 42, 45, 0.54) 0%, rgba(10, 82, 109, 0.58) 100%), url(../../assets/about-us-3.jpg);
@@ -1417,6 +1417,11 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: local;
+}
+@media only screen and (min-width: 768px) {
+  .about-hero {
+    min-height: 50vh;
+  }
 }
 @media only screen and (min-width: 992px) {
   .about-hero {
@@ -1436,11 +1441,11 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   font-weight: 700;
 }
 .about-hero__content p {
-  font-size: 20px;
   font-weight: 500;
 }
 @media only screen and (min-width: 768px) {
   .about-hero__content p {
+    font-size: 18px;
     width: 680px;
   }
 }
@@ -1566,7 +1571,7 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 }
 
 .contact-hero {
-  min-height: 50vh;
+  min-height: 40vh;
   position: relative;
   margin-top: 62px;
   background-image: linear-gradient(to top, rgba(37, 42, 45, 0.54) 0%, rgba(10, 82, 109, 0.58) 100%), url(../../assets/contact.jpg);
@@ -1574,6 +1579,11 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: local;
+}
+@media only screen and (min-width: 768px) {
+  .contact-hero {
+    min-height: 50vh;
+  }
 }
 @media only screen and (min-width: 992px) {
   .contact-hero {
@@ -1594,11 +1604,11 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   font-weight: 700;
 }
 .contact-hero__content p {
-  font-size: 18px;
   font-weight: 500;
 }
 @media only screen and (min-width: 768px) {
   .contact-hero__content p {
+    font-size: 18px;
     width: 550px;
   }
 }
@@ -1679,7 +1689,7 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 }
 
 .blog-hero {
-  min-height: 50vh;
+  min-height: 40vh;
   position: relative;
   margin-top: 62px;
   background-image: linear-gradient(to top, rgba(37, 42, 45, 0.54) 0%, rgba(10, 82, 109, 0.58) 100%), url("../../assets/blog-banner-2.jpg");
@@ -1687,6 +1697,11 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: local;
+}
+@media only screen and (min-width: 768px) {
+  .blog-hero {
+    min-height: 50vh;
+  }
 }
 @media only screen and (min-width: 992px) {
   .blog-hero {
