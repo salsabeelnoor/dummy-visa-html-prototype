@@ -1,5 +1,5 @@
 .footer {
-    background-color: $primary-color-p300;
+    background-color: $primary-color-p25;
 
     .brand {
         // border: 2px solid red;
@@ -19,13 +19,14 @@
         }
         &__name {
             h2 {
-                color: #fff;
-                text-shadow: 0px 3px 3px rgb(6 21 49);
+                color: $primary-color-p300;
+                // text-shadow: 0px 3px 3px rgb(202 215 239 / 71%);   
+                font-weight: 600;
             }
         }
         &__privacy{
             padding-top: 16px;
-            color: #d0cece;
+            color: $primary-color-p400;
             font-size: 17px;
         }
     }
@@ -58,11 +59,12 @@
 
             li {
                 a {
-                    color: #fff;
+                    color: $primary-color-p300;
+                    font-weight: 500;
                     text-transform: uppercase;
                     text-decoration: none;
                     &:hover {
-                        color: $primary-color-p75;
+                        color: $primary-color-p200;
                     }
                 }
                 
@@ -84,9 +86,14 @@
                     width: 48px;
                     height: 48px;
                     transition: background-color 0.3s;
-
+                    svg{
+                        fill: $primary-color-p300;
+                    }
                     &:hover {
                         background: $primary-color-p200;
+                        svg{
+                            fill: #fff;
+                        }
                     }
                 }
             }

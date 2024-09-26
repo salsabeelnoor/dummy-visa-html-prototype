@@ -1,7 +1,7 @@
 :root {
   // Scale is using this font-size
   --font-size: 0.8em;
-  --bg1: #e4f3fbe6;
+  --bg1: rgb(244 249 252 / 78%);
   --blue: #3498db;
   --green: #2ecc71;
   --purple: #9b59b6;
@@ -82,11 +82,11 @@ ul.infoGraphic {
         &::before {
           position: absolute;
           content: "";
-          bottom: 5px;
+          bottom: 0px;
           left: 4em;
           right: 4em;
           top: 5em;
-          box-shadow: 0 0 30px 17px #48668577;
+          box-shadow: 0 0 30px 5px #48668577;
           border-radius: 100px / 10px;
           z-index: -1;
         }
@@ -99,7 +99,7 @@ ul.infoGraphic {
           width: 120%;
           height: 150%;
           background: radial-gradient(at bottom,
-              #48668533,
+          rgb(156 157 159 / 20%),
               transparent,
               transparent);
           z-index: 1;

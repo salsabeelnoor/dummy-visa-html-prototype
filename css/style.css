@@ -358,7 +358,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .hero {
-  min-height: 65vh;
+  min-height: 55vh;
   position: relative;
   margin-top: 62px;
   background-image: linear-gradient(to left, rgba(26, 43, 61, 0) 0%, rgba(16, 36, 40, 0.65) 100%), url(../../assets/Banner-image-5.jpg);
@@ -373,7 +373,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 @media only screen and (min-width: 576px) {
   .hero {
-    min-height: 70vh;
+    min-height: 50vh;
   }
 }
 .hero__content {
@@ -396,7 +396,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 :root {
   --font-size: 0.8em;
-  --bg1: #e4f3fbe6;
+  --bg1: rgb(244 249 252 / 78%);
   --blue: #3498db;
   --green: #2ecc71;
   --purple: #9b59b6;
@@ -471,11 +471,11 @@ ul.infoGraphic li .coverWrap .numberCover {
 ul.infoGraphic li .coverWrap .numberCover::before {
   position: absolute;
   content: "";
-  bottom: 5px;
+  bottom: 0px;
   left: 4em;
   right: 4em;
   top: 5em;
-  box-shadow: 0 0 30px 17px rgba(72, 102, 133, 0.4666666667);
+  box-shadow: 0 0 30px 5px rgba(72, 102, 133, 0.4666666667);
   border-radius: 100px/10px;
   z-index: -1;
 }
@@ -486,7 +486,7 @@ ul.infoGraphic li .coverWrap .numberCover::after {
   left: -10%;
   width: 120%;
   height: 150%;
-  background: radial-gradient(at bottom, rgba(72, 102, 133, 0.2), transparent, transparent);
+  background: radial-gradient(at bottom, rgba(156, 157, 159, 0.2), transparent, transparent);
   z-index: 1;
 }
 ul.infoGraphic li .content {
@@ -602,13 +602,13 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 }
 
 .reasons {
-  background-color: rgba(228, 243, 251, 0.9019607843);
+  background-color: rgba(244, 249, 252, 0.78);
 }
 .reasons__box {
   max-width: 100%;
   width: 100%;
   padding: 40px 16px 20px;
-  background-color: #f6f9fa;
+  background-color: #fff;
   box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
   border-radius: 6px;
   position: relative;
@@ -696,7 +696,7 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   font-size: 17px;
 }
 .faq__content .accordion-body {
-  background-color: #c0e3fc;
+  background-color: rgba(228, 243, 251, 0.9019607843);
   margin-bottom: 8px;
   border-radius: 8px;
   font-size: 16px;
@@ -865,7 +865,7 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
 }
 
 .footer {
-  background-color: #00337e;
+  background-color: rgba(244, 249, 252, 0.78);
 }
 .footer .brand {
   max-width: 100%;
@@ -885,12 +885,12 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   object-fit: cover;
 }
 .footer .brand__name h2 {
-  color: #fff;
-  text-shadow: 0px 3px 3px rgb(6, 21, 49);
+  color: #00337e;
+  font-weight: 600;
 }
 .footer .brand__privacy {
   padding-top: 16px;
-  color: #d0cece;
+  color: #00255a;
   font-size: 17px;
 }
 .footer__menu {
@@ -925,12 +925,13 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   }
 }
 .footer__menu__navigation li a {
-  color: #fff;
+  color: #00337e;
+  font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
 }
 .footer__menu__navigation li a:hover {
-  color: #c0e3fc;
+  color: #3597d9;
 }
 .footer__menu__social {
   width: 100%;
@@ -948,8 +949,14 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   height: 48px;
   transition: background-color 0.3s;
 }
+.footer__menu__social li a svg {
+  fill: #00337e;
+}
 .footer__menu__social li a:hover {
   background: #3597d9;
+}
+.footer__menu__social li a:hover svg {
+  fill: #fff;
 }
 
 .tkt-booking {
