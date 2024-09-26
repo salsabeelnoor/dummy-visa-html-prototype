@@ -48,6 +48,9 @@ p {
   margin-bottom: 60px;
 }
 
+.mt-100 {
+  margin-top: 120px;
+}
 // ---------- custom gap class ----------------
 .gap-40 {
   gap: 8px;
@@ -59,6 +62,10 @@ p {
   @include xxl {
     gap: 40px;
   }
+}
+
+.column-gap-48 {
+  column-gap: 48px;
 }
 
 //----------- custom separator style -----------

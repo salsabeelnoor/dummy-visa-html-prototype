@@ -40,6 +40,10 @@ p {
   margin-bottom: 60px;
 }
 
+.mt-100 {
+  margin-top: 120px;
+}
+
 .gap-40 {
   gap: 8px;
 }
@@ -52,6 +56,10 @@ p {
   .gap-40 {
     gap: 40px;
   }
+}
+
+.column-gap-48 {
+  column-gap: 48px;
 }
 
 .separator {
@@ -1909,6 +1917,97 @@ ul.infoGraphic li:hover .coverWrap .numberCover {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 4px 12px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
   margin-bottom: 12px;
+}
+
+.blog-details__thumb-img {
+  width: 100%;
+  height: 230px;
+}
+@media only screen and (min-width: 576px) {
+  .blog-details__thumb-img {
+    height: 330px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .blog-details__thumb-img {
+    height: 430px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .blog-details__thumb-img {
+    height: 530px;
+  }
+}
+.blog-details__thumb-img img {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-details__content p {
+  color: #727272;
+}
+.blog-details__content__img {
+  width: 100%;
+  margin-block: 36px;
+  height: 230px;
+}
+@media only screen and (min-width: 576px) {
+  .blog-details__content__img {
+    height: 330px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .blog-details__content__img {
+    height: 430px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .blog-details__content__img {
+    height: 530px;
+  }
+}
+.blog-details__content__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-details__content .tag-icon i {
+  font-size: 20px;
+  color: #00255a;
+}
+.blog-details__content .tag-list a {
+  background: #FFFFFF;
+  border: 1px solid #DEDEDE;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #232323;
+  margin: 4px;
+  display: inline-block;
+  padding: 8px 20px;
+  text-transform: uppercase;
+}
+.blog-details__content .social-ico {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 17px;
+  margin-right: 0;
+}
+.blog-details__content .social-ico.fb {
+  background: #3D52A6;
+}
+.blog-details__content .social-ico.twt {
+  background: #58B1F7;
+}
+.blog-details__content .social-ico.ig {
+  background: #D9498C;
 }
 
 @keyframes shine {
