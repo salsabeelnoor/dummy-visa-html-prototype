@@ -1,24 +1,29 @@
-.hero{
+.hero {
     min-height: 55vh;
     position: relative;
     margin-top: 62px;
-    background-image: linear-gradient(to left, rgba(26, 43, 61, 0) 0%, rgb(16 36 40 / 65%) 100%), url(../../assets/Banner-image-5.jpg);
+    background-image: linear-gradient(to left, rgba(26, 43, 61, 0) 0%, rgba(16, 36, 40, 0.65) 100%), url(../../assets/Banner-image-5.jpg);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
+
     @include xl {
         margin-top: 72px;
     }
+
     @include sm {
         min-height: 50vh;
     }
-    &__content{
+
+    &__content {
         color: #fff;
+
         @include md {
             p {
                 width: 680px;
             }
         }
+
         h1 {
             font-weight: 700;
         }
